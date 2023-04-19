@@ -1,2 +1,2 @@
 # PeaceGlobalAssign
-Assignement
+Assignment
