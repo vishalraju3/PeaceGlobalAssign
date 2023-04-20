@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\product;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Str;
@@ -41,7 +41,7 @@ class ProductController extends Controller
             Product::create($request->post()+['image'=>$imageName]);
 
             return response()->json([
-                'message'=>'Product Created Successfully!!'
+                'message'=>'Created Successfully!!'
             ]);
         }catch(\Exception $e){
             \Log::error($e->getMessage());
@@ -100,13 +100,13 @@ class ProductController extends Controller
             }
 
             return response()->json([
-                'message'=>'Product Updated Successfully!!'
+                'message'=>'Updated Successfully!!'
             ]);
 
         }catch(\Exception $e){
             \Log::error($e->getMessage());
             return response()->json([
-                'message'=>'Something goes wrong while updating a product!!'
+                'message'=>'Something wrong!!'
             ],500);
         }
     }
@@ -131,13 +131,13 @@ class ProductController extends Controller
             $product->delete();
 
             return response()->json([
-                'message'=>'Product Deleted Successfully!!'
+                'message'=>'Deleted Successfully!!'
             ]);
             
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
             return response()->json([
-                'message'=>'Something goes wrong while deleting a product!!'
+                'message'=>'Something wrong!!'
             ]);
         }
     }
