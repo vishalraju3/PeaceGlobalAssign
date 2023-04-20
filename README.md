@@ -1,5 +1,6 @@
 # PeaceGlobalAssign
 BACKEND(Laravel):
+
 Performed CRUD operations for a Cars Table that consists of three attributes Car: string, Model : text, Image: text 
 
 1) create Models for the table with command: 
@@ -40,7 +41,8 @@ Delete Method:
 
 
 FRONTEND(React,Next): 
-Extensions used : 
+
+EXTENSION USED : 
 
 React Bootstrap - A widely used OpenSource library for styling
 
@@ -59,6 +61,39 @@ npm install axios react-bootstrap bootstrap
 npm install react-router-dom sweetalert2 --save
 
 npm install react-image-crop@9.1.1
+
+COMPONENTS :
+
+1)Create.js,tsx :
+
+We will create form with bootstrap and assign values to input and setstate the input value to respective fields on onchange event
+
+upon selecting the image we will get the image through reactcrop component from react-image-crop library and after cropping we set the state of crop onchange and give these values of crop and src image which gives us the cropped image then that image is attached to formdata and passed to API through axios.post
+
+
+2)edit.js,tsx :
+
+upon clicking the edit button the {row.id} will be sent to fetch the details of product later input is set by calling Usestate onchange of the fields and the formdata will be given to laravel api through Axios.post()
+
+3)List.js,tsx :
+
+all items in the table are fetched with get() method and the fetched json data is stored in 'products' variable that holds the Array of response json data.
+
+Now this data is displayed in list by mapping the 'products' array with key value pairs onto a table
+
+this same component also contains delete functionality onclick delete icon the {value.id} is passed into a function that passes the id to api through axios.delete().
+
+
+Can Contact me reagrding any clarifications
+
+Thank you
+
+Vishal
+<----------------X---------------------END------------------X--------------->
+
+
+
+
 
 
 
